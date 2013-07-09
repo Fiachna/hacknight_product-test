@@ -4,11 +4,11 @@ require 'database_cleaner'
 
 Spork.prefork do
 
-
   ENV["RAILS_ENV"] ||= 'test'
   ENV["SECRET_TOKEN"] ||= 'thisisatestingsecrettokensinceguarddoesntseemtopickupthe'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
+  require 'rspec/autorun'
 
   # Add this to load Capybara integration:
   require 'capybara/rspec'
